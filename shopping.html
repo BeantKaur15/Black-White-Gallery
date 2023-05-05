@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Black&White Gallery</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script type="text/javascript" src="jquery.min.js"></script>
+      <script type="text/javascript" src="js/shopping.js"></script>
+   </head>
+   <body>
+      <!--- header start------->
+      <header class="myheader">
+         <div class="container-fluid">
+            <div class="nav">
+               <input type="checkbox" id="nav-check">
+               <div class="nav-header">
+                  <div class="nav-title">
+                     <a href="welcome.html"><img src="images/logo.png" alt="logo" /></a>
+                  </div>
+               </div>
+               <div class="nav-btn">
+                  <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </label>
+               </div>
+               <div class="nav-links">
+                  <a href="welcome.html">Welcome</a>
+                  <a href="black-white.html">Black & White Gallery</a>
+                  <a href="color-gallery.html">Color Gallery</a>
+                  <a href="shopping.html">Shopping</a>
+                  <a href="invoice.html">Invoice</a>
+                  <a href="login.html">Logout</a>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--- header end------->
+      <!--banner section start-->
+      <section class="back-banner back-cover overlay pt-100 h-auto">
+         <div class="container-fluid inner-content">
+            <div class="banner-content text-left w-100">
+               <!--color table-->
+               <table width="100%" class="gallery-table" cellpadding="10">
+                  <tbody>
+                     <tr>
+                        <td colspan="3" class="border-none background-none">
+                           <h1 class="page-title mb-30">
+                              Color
+                           </h1>
+                           <input type="button" id="abc" class="btn-block py-10 mb-20" value="Add to Cart" onclick="calculatePrice()">
+                           <input type="text"  name="orderTotal" id="orderTotal" class="form-control" readonly>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <img src="images/women-sunset.png" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Women In Sunset</h4>
+                              <input type="checkbox" name="color-checkbox" onclick="showMe('quantitysunset', this)" class="mb-10" onchange="check()"><span>$1000</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                 <select class="form-control cart-select" id="quantitysunset" name="quantitysunset" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <img src="images/women-red.png" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Women In Red</h4>
+                              <input type="checkbox" name="color-checkbox" class="mb-10"  onclick="showMe('quantityred', this)" onchange="check()"><span>$500</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                  <select class="form-control cart-select" id="quantityred" name="quantityred" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                                
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <img src="images/net.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Net</h4>
+                              <input type="checkbox" name="color-checkbox" class="mb-10" onclick="showMe('quantitynet', this)" onchange="check()"><span>$1500</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                  <select class="form-control cart-select"  id="quantitynet" name="quantitynet" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                               </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <img src="images/bicycle.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Bicyle Run</h4>
+                              <input type="checkbox" name="color-checkbox" class="mb-10" onclick="showMe('quantitybicyle', this)" onchange="check()"><span>$1000</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                 <select class="form-control cart-select" id="quantitybicyle" name="quantitybicyle" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                               </div>
+                           </div>
+                        </td>
+                        <td>
+                           <img src="images/mirror.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Mirror</h4>
+                              <input type="checkbox" name="color-checkbox" class="mb-10"  onclick="showMe('quantitymirror', this)" onchange="check()"><span>$900</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                 <select class="form-control cart-select"  id="quantitymirror" name="quantitymirror" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                               </div>
+                           </div>
+                        </td>
+                        <td>
+                           <img src="images/highway.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Highway</h4>
+                              <input type="checkbox" name="color-checkbox" class="mb-10" onclick="showMe('quantityhighway', this)" onchange="check()"><span>$600</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                 <select class="form-control cart-select" id="quantityhighway" name="quantityhighway" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <!--color table end-->
+               <!-- black table start-->
+               <table width="100%" class="gallery-table" cellpadding="10">
+                  <tbody>
+                     <tr>
+                        <td colspan="3" class="border-none background-none">
+                           <h1 class="page-title mb-30">
+                              Black &amp; White
+                           </h1>
+                           <input type="button"  class="btn-block py-10 mb-20" value="Add to Cart" onclick="calculateColorPrice()" id="orderTotalprice">
+                           <input type="text" name="color-cart" id="cart-total" class="form-control">
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <img src="images/italy.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Italy</h4>
+                              <input type="checkbox" name="black-checkbox" class="mb-10" onclick="showMe('quantityitaly', this)" onchange="checkBlack()"><span>$1000</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                 <select class="form-control cart-select" id="quantityitaly" name="quantityitaly" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <img src="images/back1.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Water</h4>
+                              <input type="checkbox" name="black-checkbox" class="mb-10" onclick="showMe('quantitywater', this)" onchange="checkBlack()"><span>$500</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                <select class="form-control cart-select" id="quantitywater" name="quantitywater" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <img src="images/alone.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Alone</h4>
+                              <input type="checkbox" name="black-checkbox" class="mb-10" onclick="showMe('quantityalone', this)" onchange="checkBlack()"><span>$1500</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                  <select class="form-control cart-select" id="quantityalone" name="quantityalone" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <img src="images/back.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Light</h4>
+                              <input type="checkbox" name="black-checkbox" class="mb-10" onclick="showMe('quantitylight', this)" onchange="checkBlack()"><span>$1000</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                 <select class="form-control cart-select"  id="quantitylight" name="quantitylight" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <img src="images/nature.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Nature</h4>
+                              <input type="checkbox" name="black-checkbox" class="mb-10" onclick="showMe('quantitynature', this)" onchange="checkBlack()"><span>$900</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                 <select class="form-control cart-select"  id="quantitynature" name="quantitynature" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <img src="images/bb.jpg" alt="Gallery" />
+                           <div class="gallery-content">
+                              <h4 class="mb-10">Graphic</h4>
+                              <input type="checkbox" name="black-checkbox" class="mb-10" onclick="showMe('quantitygraphic', this)" onchange="checkBlack()"><span>$600</span>
+                              <div>
+                                 <span>Number :</span> &nbsp;&nbsp;
+                                  <select class="form-control cart-select" id="quantitygraphic" name="quantitygraphic" disabled="disabled">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td colspan="3" class="border-none background-none">
+                           <a href="invoice.html" class="text-decoration"><input type="submit" name="" class="btn-block mt-20" value="Go to Invoice"></a>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <!--blak table end-->
+            </div>
+         </div>
+      </section>
+      <!--banner section end-->
+      <!--footer section start-->
+      <footer>
+         <div class="container-fluid text-center text-white">
+            <ul class="list-unstyled m-0">
+               <li>
+                  <a href="#0"><img src="images/google-plus.png" alt="google-plus" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/facebook.png" alt="facebook" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/skype.png" alt="skype" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/instagram.png" alt="instagram" /></a>
+               </li>
+            </ul>
+            <p class="m-0 mt-20">
+               Copyright &copy; Black&White Gallery 2020. All Rights Reserved
+            </p>
+         </div>
+      </footer>
+      <!--footer section end-->
+   </body>
+</html>

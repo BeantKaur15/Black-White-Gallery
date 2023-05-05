@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Black&White Gallery</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script type="text/javascript" src="js/main.js"></script>
+      
+   </head>
+   <body>
+      <!--- header start------->
+      <header class="myheader">
+         <div class="container-fluid">
+            <div class="nav">
+               <input type="checkbox" id="nav-check">
+               <div class="nav-header">
+                  <div class="nav-title">
+                     <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+                  </div>
+               </div>
+               <div class="nav-btn">
+                  <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </label>
+               </div>
+               <div class="nav-links">
+                  <a href="index.html">Home</a>
+                  <a href="login.html">Login</a>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--- header end------->
+      <!--banner section start-->
+      <section class="back-banner overlay">
+         <div class="container-fluid inner-content">
+            <div class="form-div">
+               <form action="#">
+                  <label for="userid">User Name</label><br>
+                  <input type="text" id="userid" name="userid" placeholder="john" class="form-control" required><br>
+                  <label for="pswrd">Password</label><br>
+                  <input type="password" id="pswrd" name="pswrd" placeholder="*****" class="form-control" required><br>
+                  <input type="button" onclick="check(this.form)" value="Login" class="btn-block">
+               </form>
+            </div>
+         </div>
+      </section>
+      <!--banner section end-->
+      <!--footer section start-->
+      <footer>
+         <div class="container-fluid text-center text-white">
+            <ul class="list-unstyled m-0">
+               <li>
+                  <a href="#0"><img src="images/google-plus.png" alt="google-plus" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/facebook.png" alt="facebook" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/skype.png" alt="skype" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/instagram.png" alt="instagram" /></a>
+               </li>
+            </ul>
+            <p class="m-0 mt-20">
+               Copyright &copy; Black&White Gallery 2020. All Rights Reserved
+            </p>
+         </div>
+      </footer>
+      <!--footer section end-->
+   </body>
+</html>

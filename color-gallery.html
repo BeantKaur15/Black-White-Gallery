@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Black&White Gallery</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script type="text/javascript" src="jquery.min.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+      
+   </head>
+   <body>
+      <!--- header start------->
+      <header class="myheader">
+         <div class="container-fluid">
+            <div class="nav">
+               <input type="checkbox" id="nav-check">
+               <div class="nav-header">
+                  <div class="nav-title">
+                     <a href="welcome.html"><img src="images/logo.png" alt="logo" /></a>
+                  </div>
+               </div>
+               <div class="nav-btn">
+                  <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </label>
+               </div>
+               <div class="nav-links">
+                  <a href="welcome.html">Welcome</a>
+                  <a href="black-white.html">Black & White Gallery</a>
+                  <a href="color-gallery.html">Color Gallery</a>
+                  <a href="shopping.html">Shopping</a>
+                  <a href="invoice.html">Invoice</a>
+                  <a href="login.html">Logout</a>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--- header end------->
+      <!--banner section start-->
+      <section class="back-banner back-cover overlay pt-100 h-auto">
+         <div class="container-fluid inner-content">
+            <div class="banner-content text-left w-100">
+               <table width="100%" class="gallery-table" cellpadding="10">
+                  <tbody>
+                     <tr>
+                        <td colspan="3" class="border-none background-none">
+                           <h1 class="page-title">
+                              color
+                           </h1>
+                           <select id="colorgallery" name="colorgallery" class="form-control mb-20">
+                              <option value="none">Select</option>
+                              <option value="womeninred">Woman In Red</option>
+                              <option value="net">Net</option>
+                              <option value="womeninsunset">Women In Sunset</option>
+                              <option value="highway">Highway</option>
+                              <option value="bicyclerun">Bicycle Run</option>
+                              <option value="mirror">Mirror</option>
+                           </select>
+                           <input type="button" id="abc" class="btn-block py-10" value="Search" onclick="SelectedText()">
+                        </td>
+                     </tr>
+                     <tr id="detail">
+                        <td colspan="3">
+                           <table class="color-table" width="100%">
+                              <tr id="womensunset">
+                                 <td>
+                                    <div class="gallery-content">
+                                       <h4>
+                                          Women In Sunset
+                                       </h4>
+                                       <p>
+                                          Details:<br>
+                                          Camera Cannon 7D
+                                          <br>
+                                          Focal Length 72mm<br>
+                                          Shutter Speed 10 ms<br>
+                                          Aperture f/13.0<br>
+                                          ISO/Film 100<br>
+                                          Category Landscapes
+                                       </p>
+                                       <a id="Top1" title="Back to top" href="#">
+                                          <h5>Go to the Top</h5>
+                                       </a>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <img src="images/women-sunset.png" alt="Gallery" />
+                                 </td>
+                              </tr>
+                              <tr id="womenred">
+                                 <td>
+                                    <div class="gallery-content">
+                                       <h4>
+                                          Women In Red
+                                       </h4>
+                                       <p>
+                                          Details:<br>
+                                          Camera Cannon 6D
+                                          <br>
+                                          Focal Length 52mm<br>
+                                          Shutter Speed 20 ms<br>
+                                          Aperture f/11.0<br>
+                                          ISO/Film 100<br>
+                                          Category Mood
+                                       </p>
+                                       <a id="Top2" title="Back to top" href="#">
+                                          <h5>Go to the Top</h5>
+                                       </a>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <img src="images/women-red.png" alt="Gallery" />
+                                 </td>
+                              </tr>
+                              <tr id="net">
+                                 <td>
+                                    <div class="gallery-content">
+                                       <h4>
+                                          Net
+                                       </h4>
+                                       <p>
+                                          Details:<br>
+                                          Camera Cannon 8D
+                                          <br>
+                                          Focal Length 20mm<br>
+                                          Shutter Speed 20 ms<br>
+                                          Aperture f/12.0<br>
+                                          ISO/Film 100<br>
+                                          Category Mood
+                                       </p>
+                                       <a id="Top3" title="Back to top" href="#">
+                                          <h5>Go to the Top</h5>
+                                       </a>
+                                    </div>
+                                 </td>
+                                 <td> <img src="images/net.jpg" alt="Gallery" /></td>
+                              </tr>
+                              <tr id="highway">
+                                 <td>
+                                    <div class="gallery-content">
+                                       <h4>
+                                          Highway 
+                                       </h4>
+                                       <p>
+                                          Details:<br>
+                                          Camera Cannon 6D
+                                          <br>
+                                          Focal Length 52mm<br>
+                                          Shutter Speed 20 ms<br>
+                                          Aperture f/11.0<br>
+                                          ISO/Film 100<br>
+                                          Category Mood
+                                       </p>
+                                       <a id="Top4" title="Back to top" href="#">
+                                          <h5>Go to the Top</h5>
+                                       </a>
+                                    </div>
+                                 </td>
+                                 <td> <img src="images/highway.jpg" alt="Gallery" /> </td>
+                              </tr>
+                              <tr id="bicyclerun">
+                                 <td>
+                                    <div class="gallery-content">
+                                       <h4>
+                                          Bicycle Run
+                                       </h4>
+                                       <p>
+                                          Details:<br>
+                                          Camera Cannon 6D
+                                          <br>
+                                          Focal Length 52mm<br>
+                                          Shutter Speed 20 ms<br>
+                                          Aperture f/11.0<br>
+                                          ISO/Film 100<br>
+                                          Category Mood
+                                       </p>
+                                       <a id="Top5" title="Back to top" href="#">
+                                          <h5>Go to the Top</h5>
+                                       </a>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <img src="images/bicycle.jpg" alt="Gallery" />
+                                 </td>
+                              </tr>
+                              <tr id="mirror">
+                                 <td>
+                                    <div class="gallery-content">
+                                       <h4>
+                                          Mirror
+                                       </h4>
+                                       <p>
+                                          Details:<br>
+                                          Camera Cannon 6D
+                                          <br>
+                                          Focal Length 52mm<br>
+                                          Shutter Speed 20 ms<br>
+                                          Aperture f/11.0<br>
+                                          ISO/Film 100<br>
+                                          Category Mood
+                                       </p>
+                                       <a id="Top6" title="Back to top" href="#">
+                                          <h5>Go to the Top</h5>
+                                       </a>
+                                    </div>
+                                 </td>
+                                 <td>
+                                    <img src="images/mirror.jpg" alt="Gallery" />
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <a href="images/women-sunset.png" target="_blank">
+                           <img src="images/women-sunset.png" alt="Gallery" />
+                           </a>
+                           <div class="gallery-content">
+                              <h4>
+                                 Women In Sunset
+                              </h4>
+                              <p>
+                                 Details:<br>
+                                 Camera Cannon 7D
+                                 <br>
+                                 Focal Length 72mm<br>
+                                 Shutter Speed 10 ms<br>
+                                 Aperture f/13.0<br>
+                                 ISO/Film 100<br>
+                                 Category Landscapes
+                              </p>
+                              <a id="Top7" title="Back to top" href="#">
+                                 <h5>Go to the Top</h5>
+                              </a>
+                           </div>
+                        </td>
+                        <td>
+                           <a href="images/women-red.png" target="_blank">
+                           <img src="images/women-red.png" alt="Gallery" />
+                           </a>
+                           <div class="gallery-content">
+                              <h4>
+                                 Women In Red
+                              </h4>
+                              <p>
+                                 Details:<br>
+                                 Camera Cannon 6D
+                                 <br>
+                                 Focal Length 52mm<br>
+                                 Shutter Speed 20 ms<br>
+                                 Aperture f/11.0<br>
+                                 ISO/Film 100<br>
+                                 Category Mood
+                              </p>
+                              <a id="Top8" title="Back to top" href="#">
+                                 <h5>Go to the Top</h5>
+                              </a>
+                           </div>
+                        </td>
+                        <td>
+                           <a href="images/net.jpg" target="_blank">
+                           <img src="images/net.jpg" alt="Gallery" />
+                           </a>
+                           <div class="gallery-content">
+                              <h4>
+                                 Net
+                              </h4>
+                              <p>
+                                 Details:<br>
+                                 Camera Cannon 8D
+                                 <br>
+                                 Focal Length 20mm<br>
+                                 Shutter Speed 20 ms<br>
+                                 Aperture f/12.0<br>
+                                 ISO/Film 100<br>
+                                 Category Mood
+                              </p>
+                              <a id="Top9" title="Back to top" href="#">
+                                 <h5>Go to the Top</h5>
+                              </a>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <a href="images/bicycle.jpg" target="_blank">
+                           <img src="images/bicycle.jpg" alt="Gallery" />
+                           </a>
+                           <div class="gallery-content">
+                              <h4>
+                                 Bicycle Run
+                              </h4>
+                              <p>
+                                 Details:<br>
+                                 Camera Cannon 6D
+                                 <br>
+                                 Focal Length 52mm<br>
+                                 Shutter Speed 20 ms<br>
+                                 Aperture f/11.0<br>
+                                 ISO/Film 100<br>
+                                 Category Mood
+                              </p>
+                              <a id="Top10" title="Back to top" href="#">
+                                 <h5>Go to the Top</h5>
+                              </a>
+                           </div>
+                        </td>
+                        <td>
+                           <a href="images/mirror.jpg" target="_blank">
+                           <img src="images/mirror.jpg" alt="Gallery" />
+                           </a>
+                           <div class="gallery-content">
+                              <h4>
+                                 Mirror
+                              </h4>
+                              <p>
+                                 Details:<br>
+                                 Camera Cannon 6D
+                                 <br>
+                                 Focal Length 52mm<br>
+                                 Shutter Speed 20 ms<br>
+                                 Aperture f/11.0<br>
+                                 ISO/Film 100<br>
+                                 Category Mood
+                              </p>
+                              <a id="Top11" title="Back to top" href="#">
+                                 <h5>Go to the Top</h5>
+                              </a>
+                           </div>
+                        </td>
+                        <td>
+                           <a href="images/highway.jpg" target="_blank">
+                           <img src="images/highway.jpg" alt="Gallery" /> 
+                           </a>
+                           <div class="gallery-content">
+                              <h4>
+                                 Highway 
+                              </h4>
+                              <p>
+                                 Details:<br>
+                                 Camera Cannon 6D
+                                 <br>
+                                 Focal Length 52mm<br>
+                                 Shutter Speed 20 ms<br>
+                                 Aperture f/11.0<br>
+                                 ISO/Film 100<br>
+                                 Category Mood
+                              </p>
+                              <a id="Top12" title="Back to top" href="#">
+                                 <h5>Go to the Top</h5>
+                              </a>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </section>
+      <!--banner section end-->
+      <!--footer section start-->
+      <footer>
+         <div class="container-fluid text-center text-white">
+            <ul class="list-unstyled m-0">
+               <li>
+                  <a href="#0"><img src="images/google-plus.png" alt="google-plus" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/facebook.png" alt="facebook" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/skype.png" alt="skype" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/instagram.png" alt="instagram" /></a>
+               </li>
+            </ul>
+            <p class="m-0 mt-20">
+               Copyright &copy; Black&White Gallery 2020. All Rights Reserved
+            </p>
+         </div>
+      </footer>
+      <!--footer section end-->
+      
+   </body>
+</html>

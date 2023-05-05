@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Black&White Gallery</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script type="text/javascript" src="jquery.min.js"></script>
+       <script type="text/javascript" src="js/main.js"></script>
+   </head>
+   <body>
+      <!--- header start------->
+      <header class="myheader">
+         <div class="container-fluid">
+            <div class="nav">
+               <input type="checkbox" id="nav-check">
+               <div class="nav-header">
+                  <div class="nav-title">
+                     <a href="welcome.html"><img src="images/logo.png" alt="logo" /></a>
+                  </div>
+               </div>
+               <div class="nav-btn">
+                  <label for="nav-check">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  </label>
+               </div>
+               <div class="nav-links">
+                  <a href="welcome.html">Welcome</a>
+                  <a href="black-white.html">Black & White Gallery</a>
+                  <a href="color-gallery.html">Color Gallery</a>
+                  <a href="shopping.html">Shopping</a>
+                  <a href="invoice.html">Invoice</a>
+                  <a href="login.html">Logout</a>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--- header end------->
+      <!--banner section start-->
+      <section class="bg-blue py-50">
+         <div class="container-fluid">
+            <table width="100%" class="invoice-table" cellpadding="5" cellspacing="5">
+              
+               <tr>
+                  <td class="bdr-bottom">
+                     Product Name
+                  </td>
+                  <td class="bdr-bottom">Price</td>
+                  <td class="bdr-bottom">Quantity</td>
+                  <td class="bdr-bottom">Totals</td>
+               </tr>
+               <tr>
+                  <td>Pictures</td>
+                  <td> 3600.00 </td>
+                  <td>5</td>
+                  <td>
+                     Subtotal : 3600.00<br>
+                     Heading Content
+                     <br>
+                     TPS:180.00
+                  </td>
+               </tr>
+            </table>
+            <!-- finalise payment table start--->
+            <form id="payment-form">
+               <table width="100%" class="payment-table">
+                <tr>
+                <td colspan="3" class="text-center"><h1>Finalise Payment</h1></td>
+              </tr>
+                  <tr>
+                     <td width="45%" style="vertical-align: top;">
+                        <div class="gallery-content">
+                           <h4>
+                              Credit Card Info
+                           </h4>
+                           <label>&#10033; Card Number</label>
+                           <input type="text" name="cardnumber" id="cardnumber" class="form-control" maxlength="12">
+                           <label>&#10033; CVC</label>
+                           <input type="text" name="cvc" id="cvc" class="form-control" maxlength="3" required>
+                           <label>&#10033; Name On The Card</label>
+                           <input type="text" name="nameoncard" id="nameoncard" class="form-control" required>
+                           <label>&#10033; Expiration</label>
+                           <input type="text" name="expire" id="expire" class="form-control" placeholder="MM / YY" maxlength="5">
+                           <input type="button" name="clear" class="btn-block btn-green" value="Clear"  onclick="onReset()">
+                           <h4 style="margin: 0;">Total Purchase</h4>
+                           <input type="text" name="totalpurchase" class="form-control" value="3780.00" readonly>
+                           <input type="checkbox" name="payment-checkbox" id="payment-checkbox" class="mb-10">
+                           <div>&#10033; Agree Terms and Conditions</div>
+                        </div>
+                     </td>
+                     <td width="10%">
+                     </td>
+                     <td width="45%" style="vertical-align: top;">
+                        <div class="gallery-content">
+                           <h4>
+                              Shipping Address
+                           </h4>
+                           <label>&#10033; Name</label>
+                           <input type="text" name="usrname" id="usrname" class="form-control" required>
+                           <label>&#10033; Address</label>
+                           <input type="text" name="address" id="address" class="form-control">
+                           <label> Address Line 2</label>
+                           <input type="text" name="address2" class="form-control">
+                           <label>&#10033; City</label>
+                           <input type="text" name="city" id="city" class="form-control">
+                           <label>&#10033; Postal Code</label>
+                           <input type="text" name="postalcode" id="postalcode" class="form-control">
+                           <label>&#10033; Province</label>
+                           <input type="text" name="province" id="province" class="form-control">
+                           <label>Country</label>
+                           <input type="text" name="country" id="country" class="form-control">
+                        </div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td colspan="3">
+                        <input type="button" class="btn-block btn-green" value="Order Now" onclick="onOrder()">
+                     </td>
+                  </tr>
+               </table>
+               <!-- finalise payment table end--->
+            </form>
+         </div>
+      </section>
+      <!--banner section end-->
+      <!--footer section start-->
+      <footer>
+         <div class="container-fluid text-center text-white">
+            <ul class="list-unstyled m-0">
+               <li>
+                  <a href="#0"><img src="images/google-plus.png" alt="google-plus" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/facebook.png" alt="facebook" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/skype.png" alt="skype" /></a>
+               </li>
+               <li>
+                  <a href="#0"><img src="images/instagram.png" alt="instagram" /></a>
+               </li>
+            </ul>
+            <p class="m-0 mt-20">
+               Copyright &copy; Black&White Gallery 2020. All Rights Reserved
+            </p>
+         </div>
+      </footer>
+      <!--footer section end-->
+   </body>
+</html>
